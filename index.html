@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Sign Up</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+</head>
+
+<body class="w-full bg-gradient-to-r from-orange-400 to-blue-400">
+    <main>
+        <div class=" mt-[120px] flex">
+            <h1 class="mx-auto text-black capitalize font-arial text-1xl md:3xl xl:text-4xl">create an account and <span
+                    class="text-blue-600 font-semibold">try all the features</span> free for 30 days</h1>
+        </div>
+        <div class="mt-6 flex">
+            <h2 class=" mx-auto text-black font-arial capitalize">no credit card required !</h2>
+        </div>
+        <section>
+            <form action="signup.py" method="post" class="flex justify-center items-center mt-10 mx-auto flex-col">
+                <div class="flex w-[60%] xl:w-[30%] mt-8 h-[55px] rounded-md bg-white">
+                    <input type="text" required name="fullname" id="fullName" placeholder="Full Name"
+                        class="w-full outline-none text-black bg-transparent">
+                    <span class="flex justify-center mt-4 mx-auto font-arial capitalize text-red-700 text-2xl"
+                        id="nameErr"></span>
+                </div>
+                <div class="flex w-[60%] xl:w-[30%] mt-8 h-[55px] rounded-md bg-white">
+                    <input type="email" required name="email" placeholder="Email" id="email"
+                        class=" font-arial w-full outline-none bg-transparent">
+                    <span class="flex justify-center mt-4 mx-auto font-arial capitalize text-red-700 text-2xl"
+                        id="emailErr"></span>
+                </div>
+                <div class="flex w-[60%] xl:w-[30%] mt-8 h-[55px] rounded-md bg-white">
+                    <input type="password" required name="password" oninput="checkPass(event)" id="password"
+                        placeholder="Password" class=" font-arial w-full bg-transparent outline-none">
+                    <i class="cursor-pointer text-2xl bi bi-eye-slash text-black" id="togglePassword"></i>
+                </div>
+                <div class="flex justify-center mt-4 mx-auto font-arial uppercase text-2xl" id="passErr"></div>
+            </form>
+            <div
+                class="w-[40%] xl:w-[20%] rounded-md mx-auto mt-12 flex justify-center items-center duration-500 text-black bg-yellow-400 hover:bg-blue-600 hover:text-white p-5 text-center capitalize font-arial cursor-pointer" onclick="formSubmit()">
+                create free account
+            </div>
+                <div class="flex justify-center mt-5 mx-auto font-arial capitalize text-red-700 md:text-2xl" id="errors"></div>
+        </section>
+    </main>
+</body>
+<script src="js/master.js"></script>
+
+</html>
